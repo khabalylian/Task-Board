@@ -8,6 +8,8 @@ async function bootstrap() {
 		origin: [
 			'http://localhost:5173',
 			'https://react-app-psi-swart.vercel.app',
+			'https://task-board-zeta-seven.vercel.app',
+			'https://task-board-khabalylians-projects.vercel.app',
 		],
 	});
 

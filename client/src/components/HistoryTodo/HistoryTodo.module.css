@@ -1,0 +1,54 @@
+.history {
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 600px;
+	background-color: rgb(136, 161, 190);
+	border-radius: 10px;
+	overflow: auto;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	padding: 0 25px 25px 25px;
+}
+
+.historyCard {
+	display: flex;
+	align-items: center;
+	gap: 50px;
+	color: rgb(60, 64, 100);
+	margin-top: 20px;
+}
+
+.text {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.mainText {
+	width: 300px;
+}
+
+.time {
+	width: 150px;
+}
+
+.dot {
+	display: block;
+	background-color: grey;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+}
+
+.btn {
+	position: absolute;
+	right: 0;
+	font-size: 25px;
+	background-color: inherit;
+	cursor: pointer;
+}

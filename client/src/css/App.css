@@ -1,0 +1,38 @@
+@import url('./reset.css');
+@import url('../css/variables.css');
+
+* {
+	font-family: "Mukta", sans-serif;
+}
+
+.wrapper {
+	max-width: 1280px;
+	padding: 50px 10px;
+	margin: 0 auto;
+}
+
+h2 {
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--title);
+}
+
+
+p {
+	font-size: 16px;
+	font-weight: 300;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+}
+
+select {
+	font-weight: 700;
+	background-color: var(--textCard);
+	color: black;
+	border-radius: 5px;
+	padding: 3px;
+	outline: none;
+}

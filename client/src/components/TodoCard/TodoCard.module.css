@@ -1,0 +1,81 @@
+.todoCard {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	border: 1px solid var(--border);
+	border-radius: 5px;
+	color: var(--textCard);
+	margin-top: 15px;
+	padding: 10px;
+	cursor: pointer;
+	-webkit-box-shadow: 8px 7px 11px -7px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 8px 7px 11px -7px rgba(0, 0, 0, 0.75);
+	box-shadow: 8px 7px 11px -7px rgba(0, 0, 0, 0.75);
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.title {
+	width: 100%;
+	padding-right: 30px;
+}
+
+.descr {
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.timeStamp {
+	display: flex;
+	align-items: center;
+	font-weight: 700;
+	gap: 5px;
+	margin-top: 60px;
+}
+
+.priority {
+	display: flex;
+	align-items: center;
+	font-weight: 500;
+	gap: 5px;
+}
+
+.dot {
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	opacity: 1;
+}
+.option {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.listPopup {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	border: 1px solid var(--border);
+	border-radius: 5px;
+	background-color: white;
+	padding: 5px 20px;
+}
+
+.low {
+	background-color: grey;
+}
+
+.medium {
+	background-color: blue;
+}
+
+.high {
+	background-color: red;
+}

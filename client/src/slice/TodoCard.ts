@@ -5,7 +5,7 @@ import { addHistoryCard } from './TodoHistory';
 import { getAllTodo, initialState } from './TodoList';
 
 export const creatTodoCard = createAsyncThunk<
-	void,
+	ICard,
 	{ id: string; cardValue: Partial<IListCard> }
 >('todos/creatCard', async function ({ id, cardValue }, { dispatch }) {
 	const response = await fetch(`${import.meta.env.VITE_LINK}/card/${id}`, {
@@ -29,16 +29,22 @@ export const creatTodoCard = createAsyncThunk<
 	);
 
 	dispatch(getAllTodo());
+
+	return data;
 });
 
 export const deleteTodoCard = createAsyncThunk(
 	'todods/deleteCard',
 	async function (id: number, { dispatch }) {
-		await fetch(`${import.meta.env.VITE_LINK}/card/${id}`, {
+		const response = await fetch(`${import.meta.env.VITE_LINK}/card/${id}`, {
 			method: 'DELETE',
 		});
 
 		await dispatch(getAllTodo());
+
+		console.log(await response.json())
+
+		return await response.json();
 	},
 );
 

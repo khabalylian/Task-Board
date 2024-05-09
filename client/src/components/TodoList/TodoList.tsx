@@ -57,7 +57,7 @@ const TodoList: React.FC = () => {
 	const handleSubmit = async (e: FormEvent) => {
 		e.preventDefault();
 
-		await dispatch(creatTodoCard({ id: idCards, cardValue: values}));
+		await dispatch(creatTodoCard({ id: idCards, cardValue: values}))
 		await dispatch(getAllTodo());
 
 		setValues({ priority: 'Low' });
@@ -68,7 +68,11 @@ const TodoList: React.FC = () => {
 		<div className={styles.todoList}>
 			{todoList &&
 				todoList.map((todoHeader) => (
-					<div key={todoHeader.id} className={styles.todoListItem}>
+					<div
+						key={todoHeader.id}
+						className={styles.todoListItem}
+						data-testid="list"
+					>
 						<TodoListItem {...todoHeader} />
 						<button
 							className={styles.addCard}
@@ -97,7 +101,7 @@ const TodoList: React.FC = () => {
 				handleOpen={handleOpen}
 				handleClose={handleClose}
 				handleSubmit={handleSubmit}
-				cardValue={{priority: values.priority}}
+				cardValue={{ priority: values.priority }}
 			/>
 		</div>
 	);
